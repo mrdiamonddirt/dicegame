@@ -3,6 +3,7 @@ const startplay2 = document.getElementById('twoPstart');
 const menubutton = document.getElementById('menubutton');
 const resumePlay = document.getElementById('resume');
 const rollDie = document.getElementById('rollDie');
+var diceRoll = Math.floor( Math.random() * 6 ) +1;
 var playingGame = false;
 var currentScore = 0;
 
@@ -11,6 +12,12 @@ startplay1.addEventListener("click", function () {
     document.getElementById('startgame').style.display = 'none';
     playingGame = true;
     console.log(playingGame)
+    currentScore = 0;
+    diceRoll = 0;
+    console.log(`Dice Roll ${diceRoll}`)
+    console.log(`Current Score ${currentScore}`)
+    document.getElementById('number').innerHTML = diceRoll;
+    document.getElementById('score').innerHTML = currentScore;
   });
 
   startplay2.addEventListener("click", function () {
