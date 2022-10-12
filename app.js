@@ -18,6 +18,8 @@ startplay1.addEventListener("click", function () {
   document.getElementById("startgame").style.display = "none";
   playingGame = true;
   console.log(playingGame);
+  //make sure button is there
+  document.getElementById('rollDie').style.display = 'inline';
   // reset score
   currentScore = 0;
   diceRoll = 0;
@@ -49,6 +51,7 @@ rollDie.addEventListener("click", function () {
   var diceRoll = Math.floor(Math.random() * 6) + 1;
   // console.log(`Starting Score ${currentScore}`)
   currentScore = currentScore + diceRoll;
+  //lose event
   if (diceRoll == 1) {
     console.log("Event Lose");
     win.style.display = "none";
@@ -68,6 +71,12 @@ rollDie.addEventListener("click", function () {
       currentScore = 0;
       document.getElementById("score").innerHTML = 0;
     });
+    // hide lose screen
+    var hidelose = document.getElementById("hidelose");
+    hidelose.addEventListener('click', function(){
+      lose.style.display = "none";
+    })
+
   }
   if (currentScore >= 20 & won == false) {
     won = true;
