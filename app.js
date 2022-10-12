@@ -23,6 +23,9 @@ startplay1.addEventListener("click", function () {
     console.log(`Current Score ${currentScore}`)
     document.getElementById('number').innerHTML = diceRoll;
     document.getElementById('score').innerHTML = currentScore;
+    //delete history
+    previousDi.innerHTML = "";
+    console.log(`previous di ${previousDi.innerHTML}`);
   });
 
   startplay2.addEventListener("click", function () {
