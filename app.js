@@ -3,9 +3,11 @@ const startplay2 = document.getElementById('twoPstart');
 const menubutton = document.getElementById('menubutton');
 const resumePlay = document.getElementById('resume');
 const rollDie = document.getElementById('rollDie');
+const previousDi = document.getElementById('previous');
 var diceRoll = Math.floor( Math.random() * 6 ) +1;
 var playingGame = false;
 var currentScore = 0;
+var lastdie = "";
 
 startplay1.addEventListener("click", function () {
     console.log("clicked 1")
