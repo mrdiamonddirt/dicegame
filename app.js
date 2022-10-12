@@ -4,6 +4,7 @@ const menubutton = document.getElementById('menubutton');
 const resumePlay = document.getElementById('resume');
 const rollDie = document.getElementById('rollDie');
 const previousDi = document.getElementById('previous');
+const win = document.getElementById('win');
 var diceRoll = Math.floor( Math.random() * 6 ) +1;
 var playingGame = false;
 var currentScore = 0;
@@ -54,6 +55,7 @@ startplay1.addEventListener("click", function () {
     };
     if (currentScore >= 20){
       console.log('Event Win')
+      win.style.display = 'flex';
     };
     // console.log(`Dice Roll ${diceRoll}`)
     // console.log(`Current Score ${currentScore}`)
