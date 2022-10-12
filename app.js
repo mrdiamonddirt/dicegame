@@ -48,9 +48,13 @@ startplay1.addEventListener("click", function () {
     var diceRoll = Math.floor( Math.random() * 6 ) +1;
     // console.log(`Starting Score ${currentScore}`)
     currentScore = currentScore + diceRoll;
-    if (currentScore == 20){
-      console.log('Event')
-    }
+    if (diceRoll == 1){
+      console.log('Event Lose')
+      return;
+    };
+    if (currentScore >= 20){
+      console.log('Event Win')
+    };
     // console.log(`Dice Roll ${diceRoll}`)
     // console.log(`Current Score ${currentScore}`)
     document.getElementById('number').innerHTML = diceRoll;
