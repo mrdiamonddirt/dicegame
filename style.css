@@ -101,3 +101,13 @@ p{
     width: 100vh;
     z-index: 99;
 }
+#lose{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: purple;
+    height: 20vh;
+    width: 100vh;
+    z-index: 99;
+}
