@@ -27,6 +27,7 @@ body {
   border-radius: 5px;
   height: 40px;
   background-color: white;
+  box-shadow: 5px 5px black;
 }
 .screenshot{
   width: 20%;
@@ -125,6 +126,7 @@ body {
   height: 20px;
   border: 1px solid black;
   border-radius: 3px;
+  box-shadow: 1px 1px black;
 }
 #container1 {
   display: flex;
