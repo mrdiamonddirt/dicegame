@@ -187,6 +187,7 @@ rollDie2.addEventListener("click", function () {
       document.getElementById("rollDie2").style.display = "inline";
       // reset history
       previousDi2.innerHTML = "";
+      previousDi3.innerHTML = "";
       // reset highscore
       resetscores();
     });
