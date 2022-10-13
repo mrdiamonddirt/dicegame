@@ -10,6 +10,7 @@
 body {
   display: flex;
   margin: 0;
+  font-family: 'Silkscreen', cursive;
 }
 #guide{
   display: none;
@@ -22,6 +23,7 @@ body {
   width: 100%;
   height: 100vh;
   z-index: 1000;
+  
 }
 .diceimg{
   display: none;
