@@ -14,7 +14,9 @@ const howtoplay = document.getElementById("howto");
 const win = document.getElementById("win");
 const lose = document.getElementById("lose");
 //more variables
-var audio = new Audio("audio/RATTLE.WAV");
+var rattle = new Audio("audio/RATTLE.WAV");
+var winsound = new Audio("/audio/win.wav");
+var losesound = new Audio("audio/8bit-lose.wav");
 var diceRoll = Math.floor(Math.random() * 6) + 1;
 var diceRoll2 = Math.floor(Math.random() * 6) + 1;
 var playingGame = false;
@@ -86,7 +88,7 @@ rollDie.addEventListener("click", function () {
   // console.log(`Starting Score ${currentScore}`)
   currentScore = currentScore + diceRoll;
   // dice sound
-  audio.play();
+  rattle.play();
   //set dice image and animation
   const dice = document.getElementsByClassName("diceimg")[0];
   dice.style.display = "flex";
@@ -97,6 +99,7 @@ rollDie.addEventListener("click", function () {
   }, 500);
   //lose event
   if (diceRoll == 1) {
+    losesound.play()
     console.log("Event Lose");
     win.style.display = "none";
     lose.style.display = "flex";
@@ -123,6 +126,7 @@ rollDie.addEventListener("click", function () {
     });
   }
   if ((currentScore >= 20) & (won == false)) {
+    winsound.play()
     won = true;
     console.log("Event Win");
     win.style.display = "flex";
@@ -163,6 +167,7 @@ rollDie2.addEventListener("click", function () {
   }, 500);
   //lose event
   if (diceRoll2 == 1) {
+    losesound.play()
     console.log("Event Lose");
     win.style.display = "none";
     lose.style.display = "flex";
@@ -190,6 +195,7 @@ rollDie2.addEventListener("click", function () {
     });
   }
   if ((currentScore >= 20) & (won == false)) {
+    winsound.play()
     won = true;
     console.log("Event Win");
     win.style.display = "flex";
