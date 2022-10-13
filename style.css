@@ -14,6 +14,13 @@ body {
   height: 100vh;
   z-index: 1000;
 }
+.diceimg{
+  display: none;
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 40px;
+  background-color: white;
+}
 .screenshot{
   width: 50%;
 }
