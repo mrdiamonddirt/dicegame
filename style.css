@@ -183,7 +183,6 @@ p {
   height: 100%;
   width: 100%;
   z-index: 99;
-  bottom: 0;
 }
 #lose {
   display: none;
