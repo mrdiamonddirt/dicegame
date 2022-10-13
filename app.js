@@ -28,6 +28,8 @@ var player = 0;
 howtoplay.addEventListener("click", function () {
   console.log("howto");
   document.getElementById("startgame").style.display = "none";
+  document.getElementById("game1").style.display = "none";
+  document.getElementById("game2").style.display = "none";
   document.getElementById("guide").style.display = "flex";
 });
 // start game event
@@ -63,6 +65,7 @@ menubutton.addEventListener("click", function () {
     document.getElementById("resume").style.display = "block";
     resumePlay.addEventListener("click", function () {
       document.getElementById("startgame").style.display = "none";
+      // document.getElementById("guide").style.display = "none";
     });
   }
 });
@@ -221,8 +224,8 @@ const player2div = document.getElementById("player2");
 
 player1div.addEventListener("click", function () {
   player = 1;
-  player1div.style.backgroundColor = "orange";
-  player2div.style.backgroundColor = "aqua";
+  player1div.style.backgroundColor = 'orange';
+  player2div.style.backgroundColor = 'rgb(69, 123, 157)';
   document.getElementById("score2").innerHTML = player1score.innerHTML;
   currentScore = currentScorep1;
   won = false;
@@ -230,9 +233,9 @@ player1div.addEventListener("click", function () {
 });
 player2div.addEventListener("click", function () {
   player = 2;
-  player2div.style.backgroundColor = "orange";
-  player1div.style.backgroundColor = "aqua";
-  currentScore = currentScorep2;
+  player2div.style.backgroundColor = 'orange';
+  player1div.style.backgroundColor = 'rgb(69, 123, 157)';
+  currentScore =currentScorep2;
   document.getElementById("score2").innerHTML = player2score.innerHTML;
   won = false;
   // resetscores()
