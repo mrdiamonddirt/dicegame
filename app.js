@@ -1,5 +1,7 @@
 const startplay1 = document.getElementById("onePstart");
 const startplay2 = document.getElementById("twoPstart");
+const showgame1 = document.getElementById('game1');
+const showgame2 = document.getElementById('game2');
 const menubutton = document.getElementById("menubutton");
 const resumePlay = document.getElementById("resume");
 const rollDie = document.getElementById("rollDie");
@@ -16,6 +18,8 @@ var won = false;
 startplay1.addEventListener("click", function () {
   console.log("clicked 1");
   document.getElementById("startgame").style.display = "none";
+  showgame2.style.display = 'none';
+  showgame1.style.display = 'flex';
   playingGame = true;
   console.log(playingGame);
   // reset score
@@ -32,6 +36,9 @@ startplay1.addEventListener("click", function () {
 
 startplay2.addEventListener("click", function () {
   console.log("clicked 2");
+  document.getElementById("startgame").style.display = "none";
+game2.style.display = 'flex';
+game1.style.display = 'none';
 });
 
 menubutton.addEventListener("click", function () {

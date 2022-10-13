@@ -63,6 +63,15 @@ body{
     width: 100%;
     z-index: 11;
 }
+#game2{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: blanchedalmond;
+    height: 100%;
+    width: 100%;
+    z-index: 11;
+}
 #history{
     background-color: grey;
     border-radius: 5px;
@@ -110,4 +119,11 @@ p{
     height: 20vh;
     width: 100vh;
     z-index: 99;
+}
+#player1, #player2{
+    background-color: aquamarine;
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 5px;
 }
