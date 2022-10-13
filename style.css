@@ -59,10 +59,10 @@ body {
 .screenshot:active{
   text-align: center;
   position: absolute;
-  top: 20%;
-  left: 40%;
-  height: 363px;
-  width: 242px;
+  top: 10%;
+  left: 35%;
+  height: 80%;
+  width: 25%;
   z-index: 2000;
 }
 .oneimg{
@@ -286,5 +286,21 @@ background-color: var(--header-color);
     background-color: cornflowerblue;
     content:url(images/2.png);
     box-shadow: 2px 2px 2px purple;
+  }
+}
+@media (max-width: 576px) {  
+  .screenshot{
+    width: 20%;
+    margin: 5px;
+    padding: 4px;
+  }
+  .screenshot:active{
+    text-align: center;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    height: 80%;
+    width: 70%;
+    z-index: 2000;
   }
 }
