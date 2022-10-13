@@ -17,7 +17,6 @@ var playingGame = false;
 var currentScore = 0;
 var currentScorep1 = 0;
 var currentScorep2 = 0;
-var lastdie = "";
 var won = false;
 var player = 0;
 
@@ -101,7 +100,7 @@ rollDie.addEventListener("click", function () {
   // console.log(`Current Score ${currentScore}`)
   document.getElementById("number").innerHTML = diceRoll;
   document.getElementById("score").innerHTML = currentScore;
-  previousDi.innerHTML = previousDi.innerHTML + diceRoll;
+  previousDi.innerHTML = previousDi.innerHTML + `<br>${diceRoll}`;
   console.log(`previous di ${previousDi.innerHTML}`);
 });
 
@@ -170,7 +169,7 @@ rollDie2.addEventListener("click", function () {
   // console.log(`Current Score ${currentScore}`)
   document.getElementById("number2").innerHTML = diceRoll2;
   document.getElementById("score2").innerHTML = currentScore;
-  previousDi2.innerHTML = previousDi2.innerHTML + diceRoll2;
+  previousDi2.innerHTML = previousDi2.innerHTML + `<br>${diceRoll2}`;
   console.log(`previous di ${previousDi2.innerHTML}`);
 });
 
