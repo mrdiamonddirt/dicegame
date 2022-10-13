@@ -22,7 +22,8 @@ var currentScorep1 = 0;
 var currentScorep2 = 0;
 var won = false;
 var player = 0;
-//how to play eventy
+
+//how to play event
 howtoplay.addEventListener('click',function(){
   console.log('howto')
   document.getElementById("startgame").style.display = "none";
@@ -32,8 +33,7 @@ howtoplay.addEventListener('click',function(){
 startplay1.addEventListener("click", function () {
   console.log("clicked 1");
   document.getElementById("startgame").style.display = "none";
-  showgame2.style.display = 'none';
-  showgame1.style.display = 'flex';
+  showgame2.style.display = 'none'; showgame1.style.display = 'flex';
   playingGame = true;
   console.log(playingGame);
   //make sure not showing guide
@@ -46,8 +46,7 @@ startplay1.addEventListener("click", function () {
 startplay2.addEventListener("click", function () {
   console.log("clicked 2");
   document.getElementById("startgame").style.display = "none";
-game2.style.display = 'flex';
-game1.style.display = 'none';
+game2.style.display = 'flex'; game1.style.display = 'none';
 //make sure not showing guide
 document.getElementById("guide").style.display = "none";
 //make sure roll button is there
@@ -70,6 +69,10 @@ rollDie.addEventListener("click", function () {
   var diceRoll = Math.floor(Math.random() * 6) + 1;
   // console.log(`Starting Score ${currentScore}`)
   currentScore = currentScore + diceRoll;
+  //set dice image
+  const dice = document.getElementsByClassName('diceimg')[0];
+  dice.style.display = 'flex';
+  dice.src = `images/${diceRoll}.png`;
   //lose event
   if (diceRoll == 1) {
     console.log("Event Lose");
