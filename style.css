@@ -201,6 +201,7 @@ p {
     border: 1px;
     border-radius: 5px;
     box-shadow: 5px 5px black;
+    font-family: 'Silkscreen', cursive;
 }
 #losebtn:hover, #winbtn:hover, #hidelose:hover, #rollDie:hover, #rollDie2:hover{
 background-color: var(--header-color);
