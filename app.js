@@ -136,7 +136,8 @@ rollDie.addEventListener("click", function () {
   // console.log(`Current Score ${currentScore}`)
   document.getElementById("number").innerHTML = diceRoll;
   document.getElementById("score").innerHTML = currentScore;
-  previousDi.innerHTML = previousDi.innerHTML + `<br>${diceRoll}`;
+  //insert history
+  previousDi.innerHTML = previousDi.innerHTML + `<img src="images/${diceRoll}.png"/>`;
   console.log(`previous di ${previousDi.innerHTML}`);
 });
 
@@ -214,7 +215,8 @@ rollDie2.addEventListener("click", function () {
   // console.log(`Current Score ${currentScore}`)
   document.getElementById("number2").innerHTML = diceRoll2;
   document.getElementById("score2").innerHTML = currentScore;
-  previousDi2.innerHTML = previousDi2.innerHTML + `<br>${diceRoll2}`;
+  //insert history
+  previousDi2.innerHTML = previousDi2.innerHTML + `<img src="images/${diceRoll2}.png"/>`;
   console.log(`previous di ${previousDi2.innerHTML}`);
 });
 
