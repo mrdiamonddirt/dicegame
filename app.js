@@ -77,6 +77,7 @@ rollDie.addEventListener("click", function () {
       // reset highscore
       currentScore = 0;
       document.getElementById("score").innerHTML = 0;
+      won = false;
     });
     // hide lose screen
     var hidelose = document.getElementById("hidelose");
@@ -123,6 +124,7 @@ rollDie2.addEventListener("click", function () {
     //remove roll button
     document.getElementById('rollDie2').style.display = 'none';
     var losebtn = document.getElementById("losebtn");
+
     // listen for button click on lose screen
     losebtn.addEventListener("click", function () {
       //remove object
@@ -135,6 +137,7 @@ rollDie2.addEventListener("click", function () {
       // reset highscore
       resetscores()
     });
+
     // hide lose screen
     var hidelose = document.getElementById("hidelose");
     hidelose.addEventListener('click', function(){
@@ -183,6 +186,7 @@ player1div.addEventListener('click', function(){
   player2div.style.backgroundColor = 'aqua';
   document.getElementById("score2").innerHTML = player1score.innerHTML;
   currentScore = currentScorep1;
+  won = false;
   // resetscores()
 })
 player2div.addEventListener('click', function(){
@@ -191,7 +195,7 @@ player2div.addEventListener('click', function(){
   player1div.style.backgroundColor = 'aqua';
   currentScore =currentScorep2;
   document.getElementById("score2").innerHTML = player2score.innerHTML;
-  
+  won = false;
   // resetscores()
 })
 
@@ -213,4 +217,5 @@ function resetscores(){
   previousDi.innerHTML = "";
   previousDi2.innerHTML = "";
   console.log(`previous di ${previousDi.innerHTML}`);
+  won = false;
 }
