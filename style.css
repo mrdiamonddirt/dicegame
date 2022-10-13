@@ -27,10 +27,17 @@ body {
   border-radius: 5px;
   height: 40px;
   background-color: white;
-  box-shadow: 5px 5px black;
+  box-shadow: 1px 1px black;
 }
 .screenshot{
   width: 20%;
+}
+#oneimg{
+  width: 40px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 2px 2px 2px black;
 }
 #startgame {
   display: flex;
@@ -118,6 +125,7 @@ body {
   min-height: 100px;
   min-width: 80px;
   max-width: 120px;
+  box-shadow: 5px 5px black;
   /* max-height: 200px; */
 }
 #history img {
@@ -138,6 +146,7 @@ body {
   width: 200px;
   align-items: center;
   justify-content: center;
+  box-shadow: 5px 5px black;
 }
 p {
   justify-content: center;
@@ -183,6 +192,7 @@ p {
     width: auto;
     border: 1px solid black;
     border-radius: 5px;
+    box-shadow: 5px 5px black;
 }
 #player1:hover, #player2:hover{
   background-color: var(--warn-color);
