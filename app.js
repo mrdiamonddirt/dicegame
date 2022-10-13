@@ -7,12 +7,16 @@ const resumePlay = document.getElementById("resume");
 const rollDie = document.getElementById("rollDie");
 const previousDi = document.getElementById("previous");
 const previousDi2 = document.getElementById("previous2");
+const player1score = document.getElementById('player1score');
+const player2score = document.getElementById('player2score');
 const win = document.getElementById("win");
 const lose = document.getElementById("lose");
 var diceRoll = Math.floor(Math.random() * 6) + 1;
 var diceRoll2 = Math.floor(Math.random() * 6) + 1;
 var playingGame = false;
+var currentScore = 0;
 var currentScorep1 = 0;
+var currentScorep2 = 0;
 var lastdie = "";
 var won = false;
 var player = 0;
@@ -27,17 +31,7 @@ startplay1.addEventListener("click", function () {
   console.log(playingGame);
   //make sure roll button is there
   document.getElementById('rollDie').style.display = 'inline';
-  // reset score
-  currentScorep1 = 0;
-  diceRoll = 0;
-  console.log(`Dice Roll ${diceRoll}`);
-  console.log(`Current Score ${currentScorep1}`);
-  document.getElementById("number").innerHTML = diceRoll;
-  document.getElementById("score").innerHTML = currentScorep1;
-  //delete history
-  previousDi.innerHTML = "";
-  previousDi2.innerHTML = "";
-  console.log(`previous di ${previousDi.innerHTML}`);
+  resetscores()
 });
 
 startplay2.addEventListener("click", function () {
@@ -47,16 +41,7 @@ game2.style.display = 'flex';
 game1.style.display = 'none';
 //make sure roll button is there
 document.getElementById('rollDie2').style.display = 'inline';
-//clear old scores
-currentScorep1 = 0;
-diceRoll = 0;
-console.log(`Dice Roll ${diceRoll}`);
-console.log(`Current Score ${currentScorep1}`);
-document.getElementById("number").innerHTML = diceRoll;
-document.getElementById("score").innerHTML = currentScorep1;
-//delete history
-previousDi.innerHTML = "";
-console.log(`previous di ${previousDi.innerHTML}`);
+resetscores()
 });
 
 menubutton.addEventListener("click", function () {
@@ -72,8 +57,8 @@ menubutton.addEventListener("click", function () {
 // Die Rolling Event game1
 rollDie.addEventListener("click", function () {
   var diceRoll = Math.floor(Math.random() * 6) + 1;
-  // console.log(`Starting Score ${currentScorep1}`)
-  currentScorep1 = currentScorep1 + diceRoll;
+  // console.log(`Starting Score ${currentScore}`)
+  currentScore = currentScore + diceRoll;
   //lose event
   if (diceRoll == 1) {
     console.log("Event Lose");
@@ -91,7 +76,7 @@ rollDie.addEventListener("click", function () {
       // reset history
       previousDi.innerHTML = "";
       // reset highscore
-      currentScorep1 = 0;
+      currentScore = 0;
       document.getElementById("score").innerHTML = 0;
     });
     // hide lose screen
@@ -101,7 +86,7 @@ rollDie.addEventListener("click", function () {
     })
 
   }
-  if (currentScorep1 >= 20 & won == false) {
+  if (currentScore >= 20 & won == false) {
     won = true;
     console.log("Event Win");
     win.style.display = "flex";
@@ -113,9 +98,9 @@ rollDie.addEventListener("click", function () {
     });
   }
   // console.log(`Dice Roll ${diceRoll}`)
-  // console.log(`Current Score ${currentScorep1}`)
+  // console.log(`Current Score ${currentScore}`)
   document.getElementById("number").innerHTML = diceRoll;
-  document.getElementById("score").innerHTML = currentScorep1;
+  document.getElementById("score").innerHTML = currentScore;
   previousDi.innerHTML = previousDi.innerHTML + diceRoll;
   console.log(`previous di ${previousDi.innerHTML}`);
 });
@@ -127,16 +112,10 @@ rollDie2.addEventListener("click", function () {
     alert('no player selected');
     return;
   };
-  if (player == 1) {
-    console.log('player 1 selected')
-  };
-  if (player == 2) {
-    console.log('player 2 selected')
-  };
   var diceRoll2 = Math.floor(Math.random() * 6) + 1;
-  console.log(`dice roll game 2 ${currentScorep1}`)
-  //lose event
-  currentScorep1 = currentScorep1 + diceRoll2;
+  currentScore = currentScore + diceRoll2;
+  console.log(`dice roll game 2 ${currentScore}`)
+  
   //lose event
   if (diceRoll2 == 1) {
     console.log("Event Lose");
@@ -155,8 +134,7 @@ rollDie2.addEventListener("click", function () {
       // reset history
       previousDi2.innerHTML = "";
       // reset highscore
-      currentScorep1 = 0;
-      document.getElementById("score2").innerHTML = 0;
+      resetscores()
     });
     // hide lose screen
     var hidelose = document.getElementById("hidelose");
@@ -165,7 +143,7 @@ rollDie2.addEventListener("click", function () {
     })
 
   }
-  if (currentScorep1 >= 20 & won == false) {
+  if (currentScore >= 20 & won == false) {
     won = true;
     console.log("Event Win");
     win.style.display = "flex";
@@ -176,10 +154,22 @@ rollDie2.addEventListener("click", function () {
       
     });
   }
+  if (player == 1) {
+    console.log('player 1 selected')
+    // currentScorep1 = 0;
+    currentScorep1 = currentScore;
+    player1score.innerHTML = currentScorep1;
+  };
+  if (player == 2) {
+    console.log('player 2 selected')
+    // currentScorep2 = 0;
+    currentScorep2 = currentScore;
+    player2score.innerHTML = currentScorep2;
+  };
   // console.log(`Dice Roll ${diceRoll}`)
-  // console.log(`Current Score ${currentScorep1}`)
+  // console.log(`Current Score ${currentScore}`)
   document.getElementById("number2").innerHTML = diceRoll2;
-  document.getElementById("score2").innerHTML = currentScorep1;
+  document.getElementById("score2").innerHTML = currentScore;
   previousDi2.innerHTML = previousDi2.innerHTML + diceRoll2;
   console.log(`previous di ${previousDi2.innerHTML}`);
 });
@@ -191,8 +181,37 @@ const player2div = document.getElementById('player2');
 player1div.addEventListener('click', function(){
   player = 1;
   player1div.style.backgroundColor = 'orange';
+  player2div.style.backgroundColor = 'aqua';
+  document.getElementById("score2").innerHTML = player1score.innerHTML;
+  currentScore = currentScorep1;
+  // resetscores()
 })
 player2div.addEventListener('click', function(){
   player = 2;
-  player1div.style.backgroundColor = 'orange';
+  player2div.style.backgroundColor = 'orange';
+  player1div.style.backgroundColor = 'aqua';
+  currentScore =currentScorep2;
+  document.getElementById("score2").innerHTML = player2score.innerHTML;
+  
+  // resetscores()
 })
+
+function resetscores(){
+  currentScore = 0;
+  currentScorep1 = 0;
+  currentScorep2 = 0;
+  diceRoll = 0;
+  diceRoll2 = 0;
+  console.log(`Dice Roll ${diceRoll}`);
+  console.log(`Current Score ${currentScorep1}`);
+  player1score.innerHTML = 0;
+  player2score.innerHTML = 0;
+  document.getElementById("number").innerHTML = diceRoll;
+  document.getElementById("score").innerHTML = currentScore;
+  document.getElementById("number2").innerHTML = diceRoll;
+  document.getElementById("score2").innerHTML = currentScore;
+  //delete history
+  previousDi.innerHTML = "";
+  previousDi2.innerHTML = "";
+  console.log(`previous di ${previousDi.innerHTML}`);
+}
