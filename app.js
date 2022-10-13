@@ -95,7 +95,7 @@ rollDie.addEventListener("click", function () {
   const dice = document.getElementsByClassName("diceimg")[0];
   dice.style.display = "flex";
   dice.src = `images/${diceRoll}.png`;
-  dice.style.animation = "rolldiceanim 500ms";
+  dice.style.animation = "rolldiceanim 1s";
   setTimeout(() => {
     dice.style.animation = "";
   }, 500);
