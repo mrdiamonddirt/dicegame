@@ -71,6 +71,11 @@ rollDie.addEventListener("click", function () {
   const dice = document.getElementsByClassName('diceimg')[0];
   dice.style.display = 'flex';
   dice.src = `images/${diceRoll}.png`;
+  dice.style.animation = 'rolldiceanim 500ms';
+  setTimeout(() => {
+    dice.style.animation = '';
+  }, 500);
+  // dice.style.animation = '';
   //lose event
   if (diceRoll == 1) {
     console.log("Event Lose");

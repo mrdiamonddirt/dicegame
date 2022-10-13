@@ -166,3 +166,28 @@ p {
 #player1:hover, #player2:hover{
   background-color: blue;
 }
+
+@keyframes rolldiceanim {
+  0%, 100%{
+    background-color: white;
+  }
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+    background-color: green;
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+    background-color: red;
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+    background-color: blueviolet;
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+    background-color: cornflowerblue;
+  }
+}
