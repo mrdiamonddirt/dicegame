@@ -1,81 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Dice Game</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="startgame">
-        <div>
+      <div>
         <p id="resume">Resume Game</p>
         <p id="onePstart">1P Start</p>
         <p id="twoPstart">2p Start</p>
-    </div>
+        <p id="howto">How To Play</p>
+      </div>
     </div>
     <div id="fullscreen">
-        <div id="topbar">
-            <div id="title">
-            <h1>Dice Game</h1>
+        <div id="guide">
+              <h1>Guide</h1>
+              <div>
+                <p> </p>
+                <img class="screenshot" src="images/Screenshot.png" alt="" />
+                <img class="screenshot" src="images/Screenshot_1.png" alt="" />
+              </div>
+              <div>
+                <p></p>
+                <img class="screenshot" src="images/Screenshot_2.png" alt="" />
+                <img class="screenshot" src="images/Screenshot_3.png" alt="" />
             </div>
-            <div id="menubutton">
-                <div class="burger"></div><div class="burger"></div><div class="burger"></div>
-            </div>
+          </div>
+      <div id="topbar">
+        <div id="title">
+          <h1>Dice Game</h1>
         </div>
-        <div id="game1">
-            <div id="history">
-                <p>History</p>
-                <img src="" alt="">
-                <p id="previous"></p>
-            </div>
-            <div id="container1">
-                <div></div>
-                <p>Current no.</p>
-                <p id="number">Number Rolled</p>
-                <button id="rollDie">Roll Dice</button>
-                <p>High Score</p>
-                <p id="score">Current score</p>
-            </div>
+        <div id="menubutton">
+          <div class="burger"></div>
+          <div class="burger"></div>
+          <div class="burger"></div>
         </div>
-        
-        <div id="game2">
-            <div id="history">
-                <p>History</p>
-                <img src="" alt="">
-                <p id="previous2"></p>
-            </div>
-            <div id="container1">
-                <div></div>
-                <p>Current no.</p>
-                <p id="number2">Number Rolled</p>
-                <button id="rollDie2">Roll Dice</button>
-                <p>High Score</p>
-                <p id="score2">Current score</p>
-            </div>
-            <div id="player1">
-                <p>Player 1</p>
-                <p id="player1score"></p>
-            </div>
-            <div id="player2">
-                <p>Player 2</p>
-                <p id="player2score"></p>
-            </div>
+      </div>
+      <div id="game1">
+        <div id="history">
+          <p>History</p>
+          <img src="" alt="" />
+          <p id="previous"></p>
         </div>
+        <div id="container1">
+          <div></div>
+          <p>Current no.</p>
+          <p id="number">Number Rolled</p>
+          <button id="rollDie">Roll Dice</button>
+          <p>High Score</p>
+          <p id="score">Current score</p>
+        </div>
+      </div>
 
+      <div id="game2">
+        <div id="history">
+          <p>History</p>
+          <img src="" alt="" />
+          <p id="previous2"></p>
+        </div>
+        <div id="container1">
+          <div></div>
+          <p>Current no.</p>
+          <p id="number2">Number Rolled</p>
+          <button id="rollDie2">Roll Dice</button>
+          <p>High Score</p>
+          <p id="score2">Current score</p>
+        </div>
+        <div id="player1">
+          <p>Player 1</p>
+          <p id="player1score"></p>
+        </div>
+        <div id="player2">
+          <p>Player 2</p>
+          <p id="player2score"></p>
+        </div>
+      </div>
     </div>
     <div id="win">
-        <p>Congratulations<br>You Win</p>
-        <button id="winbtn">Press to continue playing</button>
+      <p>Congratulations<br />You Win</p>
+      <button id="winbtn">Press to continue playing</button>
     </div>
     <div id="lose">
-        <p>You Rolled a 1<br>You Lose</p>
-        <button id="losebtn">Press to restart</button>
-        <div>
+      <p>You Rolled a 1<br />You Lose</p>
+      <button id="losebtn">Press to restart</button>
+      <div>
         <button id="hidelose">Hide</button>
-        </div>
+      </div>
     </div>
+
     <script src="app.js"></script>
-</body>
+  </body>
 </html>

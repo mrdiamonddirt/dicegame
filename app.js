@@ -9,6 +9,7 @@ const previousDi = document.getElementById("previous");
 const previousDi2 = document.getElementById("previous2");
 const player1score = document.getElementById('player1score');
 const player2score = document.getElementById('player2score');
+const howtoplay = document.getElementById('howto');
 const win = document.getElementById("win");
 const lose = document.getElementById("lose");
 var diceRoll = Math.floor(Math.random() * 6) + 1;
@@ -19,7 +20,12 @@ var currentScorep1 = 0;
 var currentScorep2 = 0;
 var won = false;
 var player = 0;
-
+//how to play eventy
+howtoplay.addEventListener('click',function(){
+  console.log('howto')
+  document.getElementById("startgame").style.display = "none";
+  document.getElementById("guide").style.display = "flex";
+})
 // start game event
 startplay1.addEventListener("click", function () {
   console.log("clicked 1");
@@ -28,6 +34,8 @@ startplay1.addEventListener("click", function () {
   showgame1.style.display = 'flex';
   playingGame = true;
   console.log(playingGame);
+  //make sure not showing guide
+  document.getElementById("guide").style.display = "none";
   //make sure roll button is there
   document.getElementById('rollDie').style.display = 'inline';
   resetscores()
@@ -38,6 +46,8 @@ startplay2.addEventListener("click", function () {
   document.getElementById("startgame").style.display = "none";
 game2.style.display = 'flex';
 game1.style.display = 'none';
+//make sure not showing guide
+document.getElementById("guide").style.display = "none";
 //make sure roll button is there
 document.getElementById('rollDie2').style.display = 'inline';
 resetscores()

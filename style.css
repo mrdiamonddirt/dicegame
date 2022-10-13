@@ -2,6 +2,21 @@ body {
   display: flex;
   margin: 0;
 }
+#guide{
+  display: none;
+  /* display: flex; */
+  flex-direction: column;
+  background-color: chartreuse;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+}
+.screenshot{
+  width: 50%;
+}
 #startgame {
   display: flex;
   position: absolute;
@@ -18,11 +33,7 @@ body {
   height: 100vh;
   width: 100vw;
 }
-#onePstart:hover {
-  color: green;
-  font-size: 30px;
-}
-#twoPstart:hover {
+#onePstart:hover, #twoPstart:hover, #howto:hover {
   color: green;
   font-size: 30px;
 }
