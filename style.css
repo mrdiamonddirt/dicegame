@@ -185,7 +185,15 @@ p {
     padding: 15px;
     border: 1px;
     border-radius: 5px;
+    box-shadow: 5px 5px black;
 }
+#losebtn:hover, #winbtn:hover, #hidelose:hover, #rollDie:hover, #rollDie2:hover{
+background-color: var(--header-color);
+}
+#losebtn:active, #winbtn:active, #hidelose:active, #rollDie:active, #rollDie2:active{
+  background-color: var(--main-bg-color);
+  box-shadow: none;
+  }
 #player1, #player2{
     background-color: var(--div-color);
     height: auto;
