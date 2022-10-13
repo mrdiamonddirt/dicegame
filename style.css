@@ -42,7 +42,7 @@ body {
   border-radius: 5px;
   height: 40px;
   background-color: white;
-  box-shadow: 1px 1px black;
+  box-shadow: 2px 2px 2px black;
 }
 .screenshot{
   width: 20%;
@@ -224,28 +224,33 @@ background-color: var(--header-color);
 @keyframes rolldiceanim {
   0%, 100%{
     background-color: white;
+    box-shadow: 2px 2px 2px black;
   }
   10%, 90% {
     transform: translate3d(-1px, 1px, 0);
     background-color: green;
     content:url(images/6.png);
+    box-shadow: 2px 2px 2px purple;
   }
   
   20%, 80% {
     transform: translate3d(2px, -1px, 0);
     background-color: red;
     content:url(images/1.png);
+    box-shadow: 2px 2px 2px green;
   }
 
   30%, 50%, 70% {
     transform: translate3d(-4px, 2px, 0);
     background-color: blueviolet;
     content:url(images/3.png);
+    box-shadow: 2px 2px 2px blue;
   }
 
   40%, 60% {
     transform: translate3d(4px, -3px, 0);
     background-color: cornflowerblue;
     content:url(images/2.png);
+    box-shadow: 2px 2px 2px purple;
   }
 }
