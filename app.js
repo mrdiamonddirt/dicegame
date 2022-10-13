@@ -1,3 +1,4 @@
+//these are variables
 const startplay1 = document.getElementById("onePstart");
 const startplay2 = document.getElementById("twoPstart");
 const showgame1 = document.getElementById('game1');
