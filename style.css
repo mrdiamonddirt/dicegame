@@ -54,7 +54,7 @@ body {
   justify-content: flex-end;
   align-items: center;
 }
-#game1 {
+#game1, #game2 {
   display: flex;
   justify-content: center;
   align-items: center;
