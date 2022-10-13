@@ -180,9 +180,10 @@ p {
   align-items: center;
   position: absolute;
   background-color: var(--warn-color);
-  height: 20vh;
-  width: 100vh;
+  height: 100%;
+  width: 100%;
   z-index: 99;
+  bottom: 0;
 }
 #lose {
   display: none;
