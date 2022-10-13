@@ -6,6 +6,8 @@ const showgame2 = document.getElementById("game2");
 const menubutton = document.getElementById("menubutton");
 const resumePlay = document.getElementById("resume");
 const rollDie = document.getElementById("rollDie");
+const losebtn = document.getElementById("losebtn")
+const hidelose = document.getElementById("hidelose");
 const previousDi = document.getElementById("previous");
 const previousDi2 = document.getElementById("previous2");
 const player1score = document.getElementById("player1score");
@@ -105,7 +107,6 @@ rollDie.addEventListener("click", function () {
     lose.style.display = "flex";
     //remove roll button
     document.getElementById("rollDie").style.display = "none";
-    var losebtn = document.getElementById("losebtn");
     // listen for button click on lose screen
     losebtn.addEventListener("click", function () {
       //remove object
@@ -120,7 +121,7 @@ rollDie.addEventListener("click", function () {
       won = false;
     });
     // hide lose screen
-    var hidelose = document.getElementById("hidelose");
+    
     hidelose.addEventListener("click", function () {
       lose.style.display = "none";
     });
@@ -173,7 +174,7 @@ rollDie2.addEventListener("click", function () {
     lose.style.display = "flex";
     //remove roll button
     document.getElementById("rollDie2").style.display = "none";
-    var losebtn = document.getElementById("losebtn");
+    ;
 
     // listen for button click on lose screen
     losebtn.addEventListener("click", function () {
@@ -189,7 +190,6 @@ rollDie2.addEventListener("click", function () {
     });
 
     // hide lose screen
-    var hidelose = document.getElementById("hidelose");
     hidelose.addEventListener("click", function () {
       lose.style.display = "none";
     });
