@@ -10,6 +10,7 @@ const losebtn = document.getElementById("losebtn")
 const hidelose = document.getElementById("hidelose");
 const previousDi = document.getElementById("previous");
 const previousDi2 = document.getElementById("previous2");
+const previousDi3 = document.getElementById("previous3");
 const player1score = document.getElementById("player1score");
 const player2score = document.getElementById("player2score");
 const howtoplay = document.getElementById("howto");
@@ -63,6 +64,7 @@ startplay2.addEventListener("click", function () {
   resetscores();
 });
 
+// menu button top right
 menubutton.addEventListener("click", function () {
   document.getElementById("startgame").style.display = "flex";
   if (playingGame == true) {
@@ -210,19 +212,20 @@ rollDie2.addEventListener("click", function () {
     // currentScorep1 = 0;
     currentScorep1 = currentScore;
     player1score.innerHTML = currentScorep1;
+    //insert history
+  previousDi2.innerHTML = previousDi2.innerHTML + `<img src="images/${diceRoll2}.png"/>`;
   }
   if (player == 2) {
     console.log("player 2 selected");
     // currentScorep2 = 0;
     currentScorep2 = currentScore;
     player2score.innerHTML = currentScorep2;
+    previousDi3.innerHTML = previousDi3.innerHTML + `<img src="images/${diceRoll2}.png"/>`;
   }
   // console.log(`Dice Roll ${diceRoll}`)
   // console.log(`Current Score ${currentScore}`)
   document.getElementById("number2").innerHTML = diceRoll2;
   document.getElementById("score2").innerHTML = currentScore;
-  //insert history
-  previousDi2.innerHTML = previousDi2.innerHTML + `<img src="images/${diceRoll2}.png"/>`;
   console.log(`previous di ${previousDi2.innerHTML}`);
 });
 
