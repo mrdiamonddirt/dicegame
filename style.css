@@ -143,8 +143,7 @@ body {
   background-color: grey;
   border-radius: 5px;
   min-height: 100px;
-  min-width: 140px;
-  max-width: 200px;
+  width: 150px;
   box-shadow: 5px 5px black;
   /* max-height: 200px; */
 }
@@ -175,6 +174,14 @@ p {
   text-align: center;
   margin: 5px;
   /* padding-bottom: 15px; */
+}
+#playerpanel{
+  display: flex;
+  flex-direction: row;
+}
+#rightside{
+  display: flex;
+  flex-direction: column;
 }
 #resume {
   display: none;
