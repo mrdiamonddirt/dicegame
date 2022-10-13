@@ -25,4 +25,4 @@ Pause menu
 
 2 Player Game
 ---------------
-![Screenhot 6](/images/Screenshot_5.png "ScreenShot 6")
+![Screenhot 6](/images/Screenshot_6.png "ScreenShot 6")
