@@ -61,6 +61,16 @@ menubutton.addEventListener("click", function () {
     });
   }
 });
+function diceroll(){
+  //set dice image
+  const dice = document.getElementsByClassName('diceimg')[0];
+  dice.style.display = 'flex';
+  dice.src = `images/${diceRoll}.png`;
+  dice.style.animation = 'rolldiceanim 500ms';
+  setTimeout(() => {
+    dice.style.animation = '';
+  }, 500);
+}
 
 // Die Rolling Event game1
 rollDie.addEventListener("click", function () {
@@ -133,7 +143,14 @@ rollDie2.addEventListener("click", function () {
   var diceRoll2 = Math.floor(Math.random() * 6) + 1;
   currentScore = currentScore + diceRoll2;
   console.log(`dice roll game 2 ${currentScore}`)
-  
+   //set dice image
+   const dice = document.getElementsByClassName('diceimg')[1];
+   dice.style.display = 'flex';
+   dice.src = `images/${diceRoll2}.png`;
+   dice.style.animation = 'rolldiceanim 500ms';
+   setTimeout(() => {
+     dice.style.animation = '';
+   }, 500);
   //lose event
   if (diceRoll2 == 1) {
     console.log("Event Lose");
