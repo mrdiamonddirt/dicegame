@@ -40,6 +40,7 @@ body {
   z-index: 1000; 
 }
 #guidehead{
+  color: white;
   margin: 0;
 }
 .diceimg{
@@ -62,8 +63,8 @@ body {
   left: 40%;
   width: 30%;
 }
-#oneimg{
-  width: 40px;
+.oneimg{
+  width: 30px;
   border: 1px solid black;
   border-radius: 5px;
   background-color: white;
@@ -123,6 +124,7 @@ body {
   height: 12%;
   justify-content: flex-end;
   align-items: center;
+  text-align: center;
   /* height: auto; */
 }
 #topbar h1{
@@ -142,6 +144,7 @@ body {
   margin-right: auto;
   position: relative;
   justify-content: center;
+  transform: translateX(30px);
 }
 #game1, #game2 {
   display: none;
