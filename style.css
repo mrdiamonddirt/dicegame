@@ -159,7 +159,7 @@ p {
   width: 100%;
   z-index: 99;
 }
-#losebtn, #winbtn, #hidelose, #rollDie{
+#losebtn, #winbtn, #hidelose, #rollDie, #rollDie2{
     margin: 5px;
     padding: 15px;
 }
