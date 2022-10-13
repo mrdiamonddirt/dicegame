@@ -28,8 +28,8 @@ body {
   padding: 0;
 }
 #guide{
-  /* display: none; */
-  display: flex;
+  display: none;
+  /* display: flex; */
   flex-direction: column;
   background-color: var(--div-color);
   justify-content: center;
@@ -79,7 +79,7 @@ body {
   z-index: 11;
   justify-content: center;
   align-items: center;
-  display: none;
+  /* display: none; */
 }
 #fullscreen {
   background-color: var(--header-color);
