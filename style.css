@@ -82,6 +82,9 @@ body {
   width: 200px;
   justify-content: space-around;
 }
+.burger:hover {
+  transform: translateX(2px);
+}
 .burger {
   display: flex;
   background-color: black;

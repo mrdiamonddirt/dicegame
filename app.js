@@ -156,7 +156,7 @@ rollDie2.addEventListener("click", function () {
   currentScore = currentScore + diceRoll2;
   console.log(`dice roll game 2 ${currentScore}`);
   // dice sound
-  audio.play();
+  rattle.play();
   //set dice image
   const dice = document.getElementsByClassName("diceimg")[1];
   dice.style.display = "flex";
