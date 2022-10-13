@@ -15,7 +15,7 @@ const win = document.getElementById("win");
 const lose = document.getElementById("lose");
 //more variables
 var rattle = new Audio("audio/RATTLE.WAV");
-var winsound = new Audio("/audio/win.wav");
+var winsound = new Audio("audio/win.wav");
 var losesound = new Audio("audio/8bit-lose.wav");
 var diceRoll = Math.floor(Math.random() * 6) + 1;
 var diceRoll2 = Math.floor(Math.random() * 6) + 1;
