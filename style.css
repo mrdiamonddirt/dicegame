@@ -175,7 +175,7 @@ p {
   margin: 5px;
   /* padding-bottom: 15px; */
 }
-#playerpanel{
+#playerpanel, #historypanel{
   display: flex;
   flex-direction: row;
 }
